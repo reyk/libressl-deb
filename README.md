@@ -37,6 +37,12 @@ $ ( cd libressl-3.0.2 && dpkg-buildpackage --no-sign )
 $ sudo dpkg -i *.deb
 ```
 
+The `libressl_3.0.2.orig.tar.gz` source file is directly from
+LibreSSL.org, you can verify it with the official [signify] or [PGP]
+public key.  The format of this repository might change in the future,
+including the official release tarball here is to simplify the `.deb`
+build.
+
 ## Copyright and license
 
 See [COPYING] for details.
@@ -46,8 +52,10 @@ See [COPYING] for details.
 [LibreSSL]: https://www.libressl.org
 [OpenBSD]: https://www.openbsd.org/
 [OpenSSL]: https://wiki.openssl.org/index.php/Code_Quality
+[PGP]: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl.pub
 [Ubuntu]: https://www.ubuntu.com/
 [libssl]: https://man.openbsd.org/ssl.3
 [libtls]: https://man.openbsd.org/tls_init.3
 [libcrypto]: https://man.openbsd.org/crypto.3
 [netcat]: https://man.openbsd.org/nc.1
+[signify]: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl.pub
