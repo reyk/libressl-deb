@@ -52,7 +52,7 @@ See [COPYING] for details.
 [LibreSSL]: https://www.libressl.org
 [OpenBSD]: https://www.openbsd.org/
 [OpenSSL]: https://wiki.openssl.org/index.php/Code_Quality
-[PGP]: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl.pub
+[PGP]: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl.asc
 [Ubuntu]: https://www.ubuntu.com/
 [libssl]: https://man.openbsd.org/ssl.3
 [libtls]: https://man.openbsd.org/tls_init.3
