@@ -1,5 +1,4 @@
-LibreSSL's libtls for Debian
-============================
+# LibreSSL's libtls for Debian
 
 The [LibreSSL] project provides a free TLS and crypto stack that was
 forked from [OpenSSL] in 2014.  The goals are to provide a modernized
@@ -20,14 +19,25 @@ This allows to build install programs that use [libtls] without
 conflicts.  One example is [OpenBSD]'s TLS-enabled version of
 [netcat].
 
-**It includes the [libtls] library but not [libssl] or [libcrypto].**
+**It packages the [libtls] library but not [libssl] or [libcrypto].**
+
+## Installation
+
+```bash
+$ sudo apt install dpkg-dev devscripts
+$ dpkg-source -x libressl_3.0.2-1.dsc
+$ ( cd libressl-3.0.2 && dpkg-buildpackage --no-sign )
+$ sudo dpkg -i *.deb
+```
 
 ## Copyright and license
 
 See [COPYING] for details.
 
+[COPYING]: COPYING
 [Debian]: https://www.debian.org/
 [LibreSSL]: https://www.libressl.org
+[OpenBSD]: https://www.openbsd.org/
 [OpenSSL]: https://wiki.openssl.org/index.php/Code_Quality
 [Ubuntu]: https://www.ubuntu.com/
 [libssl]: https://man.openbsd.org/ssl.3

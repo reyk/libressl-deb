@@ -1,13 +1,24 @@
-sudo: required
-language: generic
-
-services:
-  - docker
-
+language: c
+addons:
+  apt:
+    packages:
+      - build-essential
+      - equivs
+      - devscripts
+      - git-buildpackage
+      - ca-certificates
+      - pristine-tar
+      - dpkg
+      - dpkg-dev
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+    - os: linux
+      dist: xenial
+    - os: linux
+      dist: trusty
 script:
   - dpkg-source -x libressl_3.0.2-1.dsc
   - cd libressl-3.0.2
-  - wget -O- http://travis.debian.net/script.sh | sh -
-
-if:
-  tag IS blank
+  - dpkg-buildpackage --no-sign
