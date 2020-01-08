@@ -1,4 +1,6 @@
-# LibreSSL's libtls for Debian
+# LibreSSL's libtls for Debian/Ubuntu
+
+> EXPERIMENTAL!!!
 
 The [LibreSSL] project provides a free TLS and crypto stack that was
 forked from [OpenSSL] in 2014.  The goals are to provide a modernized
@@ -38,7 +40,7 @@ $ sudo dpkg -i *.deb
 ```
 
 The `libressl_3.0.2.orig.tar.gz` source file is directly from
-LibreSSL.org, you can verify it with the official [signify] or [PGP]
+[LibreSSL], you can verify it with the official [signify] or [PGP]
 public key.  The format of this repository might change in the future,
 including the official release tarball here is to simplify the `.deb`
 build.
