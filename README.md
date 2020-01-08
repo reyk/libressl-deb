@@ -2,6 +2,8 @@
 
 > EXPERIMENTAL!!!
 
+[![Build Status](https://travis-ci.org/reyk/libressl-deb.svg?branch=master)](https://travis-ci.org/reyk/libressl-deb)
+
 The [LibreSSL] project provides a free TLS and crypto stack that was
 forked from [OpenSSL] in 2014.  The goals are to provide a modernized
 codebase, improved security, and to apply best practice development
