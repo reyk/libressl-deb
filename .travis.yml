@@ -3,9 +3,9 @@ addons:
   apt:
     packages:
       - build-essential
+      - autotools-dev
       - equivs
       - devscripts
-      - git-buildpackage
       - ca-certificates
       - pristine-tar
       - dpkg
@@ -21,4 +21,4 @@ matrix:
 script:
   - dpkg-source -x libressl_3.0.2-1.dsc
   - cd libressl-3.0.2
-  - dpkg-buildpackage --no-sign
+  - dpkg-buildpackage -uc -us -b -d
