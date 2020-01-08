@@ -21,4 +21,4 @@ matrix:
 script:
   - dpkg-source -x libressl_3.0.2-1.dsc
   - cd libressl-3.0.2
-  - dpkg-buildpackage -uc -us -b -d
+  - dpkg-buildpackage -uc -us -b
