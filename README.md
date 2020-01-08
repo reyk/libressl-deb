@@ -21,6 +21,13 @@ conflicts.  One example is [OpenBSD]'s TLS-enabled version of
 
 **It packages the [libtls] library but not [libssl] or [libcrypto].**
 
+## Package List
+
+* libtls-dev: LibreSSL libtls headers
+* libtls-doc: LibreSSL libtls manual pages
+* libtls19: LibreSSL libtls
+* netcat-libressl: TCP/IP swiss army knife with TLS support
+
 ## Installation
 
 ```bash
