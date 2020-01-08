@@ -4,7 +4,9 @@ addons:
     packages:
       - build-essential
       - autotools-dev
+      - automake
       - equivs
+      - dh-autoreconf
       - devscripts
       - ca-certificates
       - pristine-tar
