@@ -1,0 +1,13 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+script:
+  - dpkg-source -x libressl_3.0.2-1.dsc
+  - cd libressl-3.0.2
+  - wget -O- http://travis.debian.net/script.sh | sh -
+
+if:
+  tag IS blank
