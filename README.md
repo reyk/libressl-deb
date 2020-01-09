@@ -49,7 +49,7 @@ build.
 
 ## APT package
 
-Packages for are provided on [Debian Salsa] with an inofficial APT
+Packages are provided on [Debian Salsa] with an inofficial APT
 source.  Add the source with the following command:
 
 ```bash
