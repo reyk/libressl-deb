@@ -19,7 +19,7 @@ provide the [libssl] and [libcrypto] libraries.  This package only
 provides [libtls] as a library, statically linked with the [LibreSSL]
 versions of [libssl] and [libcrypto].
 
-This allows to build install programs that use [libtls] without
+This allows to build and install programs that use [libtls] without
 conflicts.  One example is [OpenBSD]'s TLS-enabled version of
 [netcat].
 
