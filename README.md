@@ -35,10 +35,10 @@ conflicts.  One example is [OpenBSD]'s TLS-enabled version of
 ## Installation
 
 ```bash
-$ sudo apt install dpkg-dev devscripts
-$ dpkg-source -x libressl_3.0.2-1.dsc
-$ ( cd libressl-3.0.2 && dpkg-buildpackage --no-sign )
-$ sudo dpkg -i *.deb
+sudo apt install dpkg-dev devscripts
+dpkg-source -x libressl_3.0.2-2.dsc
+( cd libressl-3.0.2 && dpkg-buildpackage --no-sign )
+sudo dpkg -i *.deb
 ```
 
 The `libressl_3.0.2.orig.tar.gz` source file is directly from
@@ -47,12 +47,33 @@ public key.  The format of this repository might change in the future,
 including the official release tarball here is to simplify the `.deb`
 build.
 
+## APT package
+
+Packages for are provided on [Debian Salsa] with an inofficial APT
+source.  Add the source with the following command:
+
+```bash
+sudo tee /etc/apt/sources.list.d/libressl.list <<EOF
+deb [ arch=amd64 allow-insecure=yes ] https://reyk-guest.pages.debian.net/libressl/ autobuilt main
+EOF
+sudo apt update
+```
+
+And install the packages:
+
+```bash
+sudo apt install libtls19 libtls-dev libtls-doc netcat-libressl
+```
+
+Please note that the packages are not signed at the moment.
+
 ## Copyright and license
 
 See [COPYING] for details.
 
 [COPYING]: COPYING
 [Debian]: https://www.debian.org/
+[Debian Salsa]: https://salsa.debian.org/reyk-guest/libressl/
 [LibreSSL]: https://www.libressl.org
 [OpenBSD]: https://www.openbsd.org/
 [OpenSSL]: https://wiki.openssl.org/index.php/Code_Quality

@@ -21,6 +21,6 @@ matrix:
     - os: linux
       dist: trusty
 script:
-  - dpkg-source -x libressl_3.0.2-1.dsc
+  - dpkg-source -x libressl_3.0.2-2.dsc
   - cd libressl-3.0.2
   - dpkg-buildpackage -uc -us -b -d
